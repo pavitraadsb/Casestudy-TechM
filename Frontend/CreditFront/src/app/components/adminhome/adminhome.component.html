@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Pending Credit Card Applications</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Card Type</th>
+          <th>Annual Income</th>
+          <th>Employment Status</th>
+          <th>Credit Score</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let application of pendingApplications">
+          <td>{{ application.CustomerId }}</td>
+          <td>{{ application.CardType }}</td>
+          <td>{{ application.AnnualIncome }}</td>
+          <td>{{ application.EmploymentStatus }}</td>
+          <td>{{ application.CreditScore }}</td>
+          <td>
+            <button class="btn btn-success" (click)="approveApplication(application)" *ngIf="application.ApplicationStatus === 'Pending'">
+                Approve
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

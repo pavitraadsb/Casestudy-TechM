@@ -1,0 +1,30 @@
+<div class="credit-card-apply-container">
+  <h2>Apply for a Credit Card</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="CustomerId">Customer ID</label>
+      <input type="number" id="CustomerId" class="form-control" [(ngModel)]="application.CustomerId" name="CustomerId" required>
+    </div>
+    <div class="form-group">
+      <label for="cardType">Card Type</label>
+      <select id="cardType" class="form-control" [(ngModel)]="application.CardType" name="CardType" required>
+        <option value="Standard">Standard</option>
+        <option value="Gold">Gold</option>
+        <option value="Platinum">Platinum</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="annualIncome">Annual Income</label>
+      <input type="number" id="annualIncome" class="form-control" [(ngModel)]="application.AnnualIncome" name="AnnualIncome" required>
+    </div>
+    <div class="form-group">
+      <label for="employmentStatus">Employment Status</label>
+      <input type="text" id="employmentStatus" class="form-control" [(ngModel)]="application.EmploymentStatus" name="EmploymentStatus" required>
+    </div>
+    <div class="form-group">
+      <label for="creditScore">Credit Score</label>
+      <input type="number" id="creditScore" class="form-control" [(ngModel)]="application.CreditScore" name="CreditScore" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Application</button>
+  </form>
+</div>

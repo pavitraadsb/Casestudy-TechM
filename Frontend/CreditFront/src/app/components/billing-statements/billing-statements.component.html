@@ -1,0 +1,19 @@
+<div class="payment-container">
+  <h2>Payments</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Payment Date</th>
+        <th>Amount</th>
+        <th>Payment Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments">
+        <td>{{ payment.PaymentDate | date }}</td>
+        <td>{{ payment.Amount }}</td>
+        <td>{{ payment.PaymentMethod }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

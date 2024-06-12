@@ -1,0 +1,85 @@
+/* CSS Code */
+.login-container {
+    width: 70%;
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between form groups */
+    max-width: 600px; /* Limit the max width */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Enables breaking into multiple lines when necessary */
+    gap: 15px; /* Adds spacing between columns */
+}
+
+.form-group.col-md-6 {
+    flex: 1; /* Makes each column take equal space in the row */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adds spacing between labels and input fields */
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center; /* Centers the login button */
+    flex-direction: column; /* Ensures everything aligns properly */
+    gap: 10px; /* Adds spacing between elements */
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px; /* Adjust the font size for smaller input fields */
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    margin-top: 10px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-footer p {
+    text-align: center;
+    margin: 0; /* Remove any margin on the paragraph */
+}

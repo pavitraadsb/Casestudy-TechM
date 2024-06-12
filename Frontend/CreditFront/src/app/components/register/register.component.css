@@ -1,0 +1,75 @@
+/* CSS Code */
+.form-container {
+    width: 80%; /* Ensures the form does not exceed the viewport width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between form groups */
+    max-width: 800px; /* Limit the max width */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-row {
+    display: flex; /* Switch to flex layout for the row */
+    gap: 15px; /* Adds spacing between columns */
+}
+
+.form-group.col {
+    flex: 1; /* Makes each column take equal space in the row */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adds spacing between labels and input fields */
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px; /* Adjust the font size for smaller input fields */
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    margin-top: 10px; /* Slight margin to ensure space from the other content */
+    background-color: #6c757d; /* Adjusting the color for the secondary button */
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 15px;
+}
+.form-submit {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}

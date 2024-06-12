@@ -1,0 +1,20 @@
+<div class="report-container">
+    <h2>Reports</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Report Type</th>
+          <th>Generated Date</th>
+          <th>Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of reports">
+          <td>{{ report.ReportType }}</td>
+          <td>{{ report.GeneratedDate | date }}</td>
+          <td>{{ report.Content }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
