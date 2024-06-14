@@ -116,16 +116,21 @@ namespace CreditCardPro.Controllers
             return Ok(new { message = "Registration successful" });
         }
         [HttpPost("login")]
-        public async Task<ActionResult> Login([FromBody] CustLoginRequest loginRequest)
+        public async Task<IActionResult> Login([FromBody] CustLoginRequest request)
         {
-            var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Email == loginRequest.Email && c.Password == loginRequest.Password);
+            var customer = await _context.Customers
+                                         .FirstOrDefaultAsync(c => c.Email == request.Email && c.Password == request.Password);
+
             if (customer == null)
             {
-                return BadRequest(ModelState);
+                return Unauthorized();
             }
-            return Ok(new { message = "Login Successfull" });
+
+            // Return customer ID along with other details
+            return Ok(new { CustomerId = customer.CustomerId,FirstName=customer.FirstName,LastName=customer.LastName, Email = customer.Email,Password=customer.Password,ConfrimPassword=customer.ConfirmPassword,DateOfBirth=customer.DateOfBirth,Address=customer.Address,PhoneNumber=customer.PhoneNumber,SSN=customer.SSN,EmploymentInformation=customer.EmploymentInformation });
         }
-    }public class CustLoginRequest
+    }
+    public class CustLoginRequest
     {
         public string Email { get; set; }
         public string Password { get; set; }

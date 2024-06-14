@@ -1,87 +1,88 @@
-<!-- register.component.html -->
-<div class="form-container">
-    <h2>Register</h2>
-    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="FirstName">First Name:</label>
-                <input type="text" class="form-control" id="FirstName" name="FirstName" [(ngModel)]="customer.FirstName" required>
-                <div *ngIf="registerForm.submitted && !customer.FirstName" class="error-message">
-                    First Name is required.
+<div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-lg-8">
+        <div class="form-2-wrapper">
+          <h2 class="text-center mb-4">Register</h2>
+          <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <div class="form-row">
+              <div class="form-group col mb-3 form-box">
+                <input type="text" class="form-control" id="FirstName" name="FirstName" [(ngModel)]="customer.FirstName" placeholder="First Name" required #FirstName="ngModel">
+                <div *ngIf="registerForm.submitted && FirstName.invalid && (FirstName.dirty || FirstName.touched)" class="error-message">
+                  First Name is required.
                 </div>
-            </div>
-            <div class="form-group col">
-                <label for="LastName">Last Name:</label>
-                <input type="text" class="form-control" id="LastName" name="LastName" [(ngModel)]="customer.LastName" required>
-                <div *ngIf="registerForm.submitted && !customer.LastName" class="error-message">
-                    Last Name is required.
+              </div>
+              <div class="form-group col mb-3 form-box">
+                <input type="text" class="form-control" id="LastName" name="LastName" [(ngModel)]="customer.LastName" placeholder="Last Name" required #LastName="ngModel">
+                <div *ngIf="registerForm.submitted && LastName.invalid && (LastName.dirty || LastName.touched)" class="error-message">
+                  Last Name is required.
                 </div>
+              </div>
             </div>
-            <div class="form-group col">
-                <label for="Email">Email:</label>
-                <input type="email" class="form-control" id="Email" name="Email" [(ngModel)]="customer.Email" required>
-                <div *ngIf="registerForm.submitted && !customer.Email" class="error-message">
-                    Valid email is required.
+            <div class="form-row">
+              <div class="form-group col mb-3 form-box">
+                <input type="email" class="form-control" id="Email" name="Email" [(ngModel)]="customer.Email" placeholder="Email" required #Email="ngModel">
+                <div *ngIf="registerForm.submitted && Email.invalid && (Email.dirty || Email.touched)" class="error-message">
+                  Valid email is required.
                 </div>
-            </div>
-            <div class="form-group col">
-                <label for="Password">Password:</label>
-                <input type="password" class="form-control" id="Password" name="Password" [(ngModel)]="customer.Password" required>
-                <div *ngIf="registerForm.submitted && !customer.Password" class="error-message">
-                    Password is required.
+              </div>
+              <div class="form-group col mb-3 form-box">
+                <input type="password" class="form-control" id="Password" name="Password" [(ngModel)]="customer.Password" placeholder="Password" required #Password="ngModel">
+                <div *ngIf="registerForm.submitted && Password.invalid && (Password.dirty || Password.touched)" class="error-message">
+                  Password is required.
                 </div>
+              </div>
             </div>
+            <div class="form-row">
+              <div class="form-group col mb-3 form-box">
+                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" [(ngModel)]="customer.ConfirmPassword" placeholder="Confirm Password" required #ConfirmPassword="ngModel">
+                <div *ngIf="registerForm.submitted && ConfirmPassword.invalid && (ConfirmPassword.dirty || ConfirmPassword.touched)" class="error-message">
+                  Confirm Password is required.
+                </div>
+              </div>
+              <div class="form-group col mb-3 form-box">
+                <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" [(ngModel)]="customer.DateOfBirth" required #DateOfBirth="ngModel">
+                <div *ngIf="registerForm.submitted && DateOfBirth.invalid && (DateOfBirth.dirty || DateOfBirth.touched)" class="error-message">
+                  Date of Birth is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col mb-3 form-box">
+                <input type="text" class="form-control" id="Address" name="Address" [(ngModel)]="customer.Address" placeholder="Address" required #Address="ngModel">
+                <div *ngIf="registerForm.submitted && Address.invalid && (Address.dirty || Address.touched)" class="error-message">
+                  Address is required.
+                </div>
+              </div>
+              <div class="form-group col mb-3 form-box">
+                <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" [(ngModel)]="customer.PhoneNumber" placeholder="Phone Number" required pattern="^\d{10}$" #PhoneNumber="ngModel">
+                <div *ngIf="registerForm.submitted && PhoneNumber.invalid && (PhoneNumber.dirty || PhoneNumber.touched)" class="error-message">
+                  <div *ngIf="PhoneNumber.errors?.['required']">Phone Number is required.</div>
+                  <div *ngIf="PhoneNumber.errors?.['pattern']">Phone Number must be 10 digits.</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col mb-3 form-box">
+                <input type="text" class="form-control" id="SSN" name="SSN" [(ngModel)]="customer.SSN" placeholder="SSN" required #SSN="ngModel">
+                <div *ngIf="registerForm.submitted && SSN.invalid && (SSN.dirty || SSN.touched)" class="error-message">
+                  SSN is required.
+                </div>
+              </div>
+              <div class="form-group col mb-3 form-box">
+                <input type="text" class="form-control" id="EmploymentInformation" name="EmploymentInformation" [(ngModel)]="customer.EmploymentInformation" placeholder="Employment Information" #EmploymentInformation="ngModel">
+              </div>
+            </div>
+            <br>
+            <div class="form-submit">
+              <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+          <div class="login-redirect text-center">
+            <p>Already have an account?</p>
+            <button class="btn btn-secondary" (click)="navigateToLogin()">Login</button>
+          </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="ConfirmPassword">Confirm Password:</label>
-                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" [(ngModel)]="customer.ConfirmPassword" required>
-                <div *ngIf="registerForm.submitted && !customer.ConfirmPassword" class="error-message">
-                    Confirm Password is required.
-                </div>
-            </div>
-            <div class="form-group col">
-                <label for="DateOfBirth">Date of Birth:</label>
-                <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" [(ngModel)]="customer.DateOfBirth" required>
-                <div *ngIf="registerForm.submitted && !customer.DateOfBirth" class="error-message">
-                    Date of Birth is required.
-                </div>
-            </div>
-            <div class="form-group col">
-                <label for="Address">Address:</label>
-                <input type="text" class="form-control" id="Address" name="Address" [(ngModel)]="customer.Address" required>
-                <div *ngIf="registerForm.submitted && !customer.Address" class="error-message">
-                    Address is required.
-                </div>
-            </div>
-            <div class="form-group col">
-                <label for="PhoneNumber">Phone Number:</label>
-                <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" [(ngModel)]="customer.PhoneNumber" required pattern="^\d{10}$">
-                <div *ngIf="registerForm.submitted && !customer.PhoneNumber" class="error-message">
-                    Phone Number is invalid. Please use a valid phone number format (e.g., 1234567890).
-                </div>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="SSN">SSN:</label>
-                <input type="text" class="form-control" id="SSN" name="SSN" [(ngModel)]="customer.SSN" required>
-                <div *ngIf="registerForm.submitted && !customer.SSN" class="error-message">
-                    SSN is required.
-                </div>
-            </div>
-            <div class="form-group col">
-                <label for="EmploymentInformation">Employment Information:</label>
-                <input type="text" class="form-control" id="EmploymentInformation" name="EmploymentInformation" [(ngModel)]="customer.EmploymentInformation">
-            </div>
-        </div>
-        <br>
-        <div class="form-submit">
-            <button type="submit" class="btn btn-primary">Register</button>
-        </div>
-    </form>
-    <div class="login-redirect">
-        <p>Already have an account?</p>
-        <button class="btn btn-secondary" (click)="navigateToLogin()">Login</button>
+      </div>
     </div>
-</div>
+  </div>
+  

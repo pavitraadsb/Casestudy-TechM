@@ -103,5 +103,23 @@ namespace CreditCardPro.Controllers
         {
             return _context.SupportRequests.Any(e => e.SupportRequestId == id);
         }
+        [HttpGet("requests")]
+        public async Task<IActionResult> GetSupportRequest()
+        {
+            var requests = await _context.SupportRequests.ToListAsync();
+            return Ok(requests);
+        }
+
+        [HttpPost("submit")]
+        public async Task<IActionResult> SubmitSupportRequest(SupportRequest supportRequest)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            _context.SupportRequests.Add(supportRequest);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Support request submitted successfully" });
+        }
     }
 }

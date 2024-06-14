@@ -1,26 +1,55 @@
 import { Component, OnInit } from '@angular/core';
-import { Transaction } from './transaction-history.model';
-import { TransactionService } from 'src/app/service/transaction.service';
 
+import { TransactionService } from 'src/app/service/transaction.service';
+import { FormsModule } from '@angular/forms';
+
+interface Transaction {
+  transactionId: number;
+  paymentId: number;
+  transactionDate: Date;
+  amount: number;
+  merchant: string;
+  category: string;
+  status: string;
+}
 @Component({
   selector: 'app-transaction-history',
   templateUrl: './transaction-history.component.html',
   styleUrls: ['./transaction-history.component.css']
 })
 export class TransactionHistoryComponent implements OnInit {
+  // transactions: Transaction[] = [];
+  // filters: any = {
+  //   StartDate: '',
+  //   EndDate: '',
+  //   Amount: '',
+   
+  // };
+  // constructor(private transactionService: TransactionService) {}
+
+  // ngOnInit() {
+  //   this.loadTransactions();
+  // }
+
+  // loadTransactions() {
+  //   this.transactionService.getTransactions(this.filters).subscribe(
+  //     data => {
+  //       this.transactions = data;
+  //     },
+  //     error => {
+  //       alert('Error loading transactions');
+  //     }
+  //   );
+  // }
+
+  // onFilter() {
+  //   this.loadTransactions();
+  // }
   transactions: Transaction[] = [];
 
-  constructor(private transactionService: TransactionService) {}
+  constructor(private paymentService: TransactionService) { }
 
   ngOnInit(): void {
-    // Assuming customer ID is 1 for demo purposes
-    this.transactionService.getCustomerTransactions(1).subscribe(
-      (response) => {
-        this.transactions = response;
-      },
-      (error) => {
-        alert('Error fetching transactions');
-      }
-    );
+    this.transactions = this.paymentService.getTransactions();
   }
 }

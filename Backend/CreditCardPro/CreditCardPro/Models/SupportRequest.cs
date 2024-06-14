@@ -7,9 +7,7 @@ namespace CreditCardPro.Models
     {
         [Key]
         public int SupportRequestId { get; set; }
-        public int TransactionId {  get; set; }
-        [ForeignKey("TransactionId")]
-        public Transaction Transaction { get; set; }
+        public string IssueDescription { get; set; }
         public DateTime RequestDate { get; set; }
         [Required]
         public string Status {  get; set; }

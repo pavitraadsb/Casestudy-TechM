@@ -7,13 +7,14 @@ namespace CreditCardPro.Models
     {
         [Key]
         public int PaymentId { get; set; }
-        public int StatementId { get; set; }
+        public int StatementId {  get; set; }
         [ForeignKey("StatementId")]
         public Statement Statement { get; set; }
         [Required]
         public decimal Amount { get; set; }
         [Required]
         public string PaymentMethod { get; set; }
-        public DateTime PaymentDate { get; set; } = DateTime.Now;
+        public DateTime PaymentDate { get; set; }
+        
     }
 }

@@ -1,7 +1,16 @@
-export class Payment {
-  PaymentId: number = 0;
-  StatementId: number = 0;
-  Amount: number = 0;
-  PaymentMethod: string = '';
-  PaymentDate: Date = new Date();
+export class BillingStatement {
+  statementId: number = 0;
+  month: string = '';
+  year: number = 0;
+  totalDue: number = 0;
+  dueDate: Date = new Date();
+  payments: any;
+}
+export interface Payment {
+  paymentId: number;
+  amount: number;
+  paymentMethod: string;
+  paymentDate: Date;
+  totalDue: number;
+  outstandingBalance: number;
 }

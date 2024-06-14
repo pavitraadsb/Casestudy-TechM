@@ -12,40 +12,43 @@ import { CreditCardService } from 'src/app/service/credit-card.service';
   styleUrls: ['./admindashboard.component.css']
 })
 export class AdmindashboardComponent implements OnInit {
-  pendingApplications: CreditCardApplication[] = [];
-
-  constructor(private applicationService: CreditCardService) {}
-
-  ngOnInit() {
-    this.loadPendingApplications();
+  ngOnInit(): void {
   }
+  // pendingApplications: CreditCardApplication[] = [];
 
-  loadPendingApplications() {
-    this.applicationService.getCreditCardApplications().subscribe(
-      applications => {
-        this.pendingApplications = applications;
-      },
-      error => {
-        console.error('Failed to load pending applications', error);
-      }
-    );
-  }
+  // constructor(private applicationService: CreditCardService) {}
 
-  approveApplication(application: CreditCardApplication): void {
-    if (application.ApplicationId !== undefined) {
-      application.ApplicationStatus = 'Approved';
-      this.applicationService.updateCreditCardApplication(application.ApplicationId, application).subscribe(
-        () => {
-          console.log('Application approved');
-          this.loadPendingApplications();
-        },
-        (error) => {
-          console.error('Error approving application', error);
-        }
-      );
-    } else {
-      console.error('ApplicationId is undefined');
-    }
-  }
+  // ngOnInit() {
+  //   this.loadPendingApplications();
+  // }
+
+  // loadPendingApplications() {
+  //   this.applicationService.getCreditCardApplications().subscribe(
+  //     applications => {
+  //       this.pendingApplications = applications;
+  //     },
+  //     error => {
+  //       console.error('Failed to load pending applications', error);
+  //     }
+  //   );
+  // }
+
+  // approveApplication(application: CreditCardApplication): void {
+  //   if (application.ApplicationId !== undefined) {
+  //     application.ApplicationStatus = 'Approved';
+  //     this.applicationService.updateCreditCardApplication(application.ApplicationId, application).subscribe(
+  //       () => {
+  //         console.log('Application approved');
+  //         this.loadPendingApplications();
+  //       },
+  //       (error) => {
+  //         console.error('Error approving application', error);
+  //       }
+  //     );
+  //   } else {
+  //     console.error('ApplicationId is undefined');
+  //   }
+  // }
+  
 }
 

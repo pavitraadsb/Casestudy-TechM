@@ -1,30 +1,16 @@
-<div class="container">
-    <h2>Pending Credit Card Applications</h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Customer ID</th>
-          <th>Card Type</th>
-          <th>Annual Income</th>
-          <th>Employment Status</th>
-          <th>Credit Score</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let application of pendingApplications">
-          <td>{{ application.CustomerId }}</td>
-          <td>{{ application.CardType }}</td>
-          <td>{{ application.AnnualIncome }}</td>
-          <td>{{ application.EmploymentStatus }}</td>
-          <td>{{ application.CreditScore }}</td>
-          <td>
-            <button class="btn btn-success" (click)="approveApplication(application)" *ngIf="application.ApplicationStatus === 'Pending'">
-                Approve
-              </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+<section> 
+    <div class="main_container">
+      <div class="content">
+        <h2>Credit Card Administration System </h2>
+        <p> Welcome to the Admin Dashboard. Here, you can efficiently manage all aspects of the credit card system, from customer accounts and transaction monitoring to payment processing and financial reporting.</p>
+        <p> Our comprehensive tools allow you to oversee and control user activities, ensuring security and accuracy in all operations.</p> 
+        <p>Stay updated with real-time data, generate detailed reports, and maintain seamless communication with your customers.</p>
+        <p> Empower your administrative tasks with our robust and intuitive platform designed for optimal performance and reliability..</p>
+        <div class=""button-container>
+          <button>Let's Goo!</button>
+        </div>
+            
+      </div>
+      
+    </div>
+  </section>

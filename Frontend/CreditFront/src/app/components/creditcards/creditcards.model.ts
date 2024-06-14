@@ -1,13 +1,13 @@
 export class CreditCard {
-    CreditCardId: number = 0;
-    CustomerId: number = 0;
-    CardType: string = '';
-    CardNumber: string = '';
-    ExpiryDate: Date = new Date();
+    creditCardId: number = 0;
+    
+    cardType: string = '';
+    cardNumber: string = '';
+    expiryDate: Date = new Date();
     CVV: string = '';
-    CreditLimit: number = 0;
-    AvailableCredit: number = 0;
-    IssuedDate: Date = new Date();
-    Status: string = '';
+    creditLimit: number = 0;
+    availableCredit: number = 0;
+    issuedDate: Date = new Date();
+    status: string = '';
   }
   

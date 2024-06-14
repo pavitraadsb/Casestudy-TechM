@@ -7,10 +7,6 @@ namespace CreditCardPro.Models
     {
         [Key]
         public int CreditCardId { get; set; }
-        public int CustomerId { get; set; }
-        [ForeignKey("CustomerId")]
-        public Customer Customer { get; set; }
-        [Required]
         public string CardType { get; set; }
         [Required(ErrorMessage = "The field is required.")]
         [RegularExpression(@"^\d{16}$", ErrorMessage = "The field must be exactly 16 digits.")]

@@ -1,0 +1,33 @@
+<app-loginheader></app-loginheader>
+<div class="container"><br>
+    <div class="row">
+      <!-- Left Blank Side -->
+      <div class="col-lg-6"></div>
+  
+      <!-- Right Side Form -->
+      <div class="col-lg-6 d-flex align-items-center justify-content-center right-side">
+        <br>
+          <div class="form-2-wrapper">
+          <h2 class="text-center mb-4">Admin Sign Into Your Account</h2>
+          <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)"  >
+            <div class="mb-3 form-box">
+              <input type="email" class="form-control" id="Email" [(ngModel)]="loginRequest.Email " name="Email" placeholder="Enter Your Email" required #myemail="ngModel">
+              <div *ngIf="myemail.invalid && myemail.touched" class="error-message">
+                  Email is required and should be in proper format.
+                </div>
+          </div>
+            <div class="mb-3 form-box">
+              <input type="password" class="form-control" id="Password" [(ngModel)]="loginRequest.Password"name="Password" placeholder="Enter Your Password" required #mypass="ngModel">
+              <div *ngIf="mypass.invalid && mypass.touched" class="error-message">
+                  Password is required.
+                </div>
+          </div>
+            <div class="mb-3">
+            </div>
+            <button type="submit" [disabled]="myForm.invalid" class="btn btn-outline-secondary login-btn w-100 mb-3" >Login</button>
+          </form>
+          
+  
+    </div>
+  </div>
+  

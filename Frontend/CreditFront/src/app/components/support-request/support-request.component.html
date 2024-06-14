@@ -1,15 +1,31 @@
-<div class="support-request-container">
-    <h2>Support Request</h2>
-    <form (ngSubmit)="onSubmit()">
-      <div>
-        <label for="issueDescription">Issue Description</label>
-        <textarea id="issueDescription" [(ngModel)]="request.issueDescription" name="issueDescription" required></textarea>
-      </div>
-      <div>
-        <label for="transactionId">Transaction ID (optional)</label>
-        <input type="number" id="transactionId" [(ngModel)]="request.transactionId" name="transactionId">
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-  
+<div class="container">
+  <h2>Support Requests</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="issueDescription">Issue Description:</label>
+      <textarea class="form-control" id="IssueDescription" [(ngModel)]="supportRequest.issueDescription" name="IssueDescription" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <h3 class="mt-4">Submitted Requests</h3>
+  <table class="table table-striped mt-4">
+    <thead>
+      <tr>
+        <th>Request ID</th>
+        
+        <th>Date</th>
+        <th>Issue Description</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of supportRequests">
+        <td>{{request.supportRequestId}}</td>
+        
+        <td>{{request.requestDate}}</td>
+        <td>{{request.issueDescription}}</td>
+        <td>{{request.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

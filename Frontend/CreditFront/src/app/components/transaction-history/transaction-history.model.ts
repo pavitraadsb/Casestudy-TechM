@@ -1,10 +1,9 @@
 export class Transaction {
-  TransactionId: number = 0;
-  CustomerId: number = 0;
-  CreditCardId: number = 0;
-  TransactionDate: Date = new Date();
-  Amount: number = 0;
-  Merchant: string = '';
-  Category: string = '';
-  Status: string = '';
+  transactionId: number = 0;
+  creditCardId?: number = 0;
+  transactionDate: Date = new Date();
+  amount: number = 0;
+  merchant: string = '';
+  category: string = '';
+  status: string = '';
 }

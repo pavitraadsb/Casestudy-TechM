@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #2f7ac59e; /* Light gray background */
+    border-bottom: 1px solid #629eda; /* Slight border at the bottom */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #021529; /* Darker color for the brand name */
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #195998; /* Darker color for links */
+    margin-right: 1rem; /* Space between links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #245487; /* Change color on hover */
+  }
+

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CreditCardPro.Migrations
 {
     [DbContext(typeof(CardDbContext))]
-    [Migration("20240611163245_initial")]
-    partial class initial
+    [Migration("20240614020640_initaial")]
+    partial class initaial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,32 +24,6 @@ namespace CreditCardPro.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("CreditCardPro.Models.Account", b =>
-                {
-                    b.Property<int>("AccountId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountId"));
-
-                    b.Property<string>("AccountNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AccountStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AccountId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Accounts");
-                });
 
             modelBuilder.Entity("CreditCardPro.Models.Admin", b =>
                 {
@@ -87,6 +61,23 @@ namespace CreditCardPro.Migrations
                     b.ToTable("Admins");
                 });
 
+            modelBuilder.Entity("CreditCardPro.Models.CardType", b =>
+                {
+                    b.Property<int>("CardTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CardTypeId"));
+
+                    b.Property<string>("TypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CardTypeId");
+
+                    b.ToTable("CardTypes");
+                });
+
             modelBuilder.Entity("CreditCardPro.Models.CreditCard", b =>
                 {
                     b.Property<int>("CreditCardId")
@@ -113,9 +104,6 @@ namespace CreditCardPro.Migrations
                     b.Property<decimal>("CreditLimit")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ExpiryDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -128,8 +116,6 @@ namespace CreditCardPro.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CreditCardId");
-
-                    b.HasIndex("CustomerId");
 
                     b.ToTable("creditCards");
                 });
@@ -177,8 +163,6 @@ namespace CreditCardPro.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("ApplicationId");
-
-                    b.HasIndex("CustomerId");
 
                     b.ToTable("creditCardsApplication");
                 });
@@ -306,28 +290,19 @@ namespace CreditCardPro.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StatementId"));
 
-                    b.Property<int>("CreditCardId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("MinimumDue")
+                    b.Property<decimal>("AmountPaid")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("StatementDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TotalDue")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("StatementId");
-
-                    b.HasIndex("CreditCardId");
 
                     b.ToTable("Statements");
                 });
@@ -343,6 +318,10 @@ namespace CreditCardPro.Migrations
                     b.Property<int>("HandleBy")
                         .HasColumnType("int");
 
+                    b.Property<string>("IssueDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("RequestDate")
                         .HasColumnType("datetime2");
 
@@ -353,12 +332,7 @@ namespace CreditCardPro.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TransactionId")
-                        .HasColumnType("int");
-
                     b.HasKey("SupportRequestId");
-
-                    b.HasIndex("TransactionId");
 
                     b.ToTable("SupportRequests");
                 });
@@ -378,12 +352,12 @@ namespace CreditCardPro.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CreditCardId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Merchant")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PaymentId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -394,48 +368,15 @@ namespace CreditCardPro.Migrations
 
                     b.HasKey("TransactionId");
 
-                    b.HasIndex("CreditCardId");
+                    b.HasIndex("PaymentId");
 
                     b.ToTable("Transactions");
-                });
-
-            modelBuilder.Entity("CreditCardPro.Models.Account", b =>
-                {
-                    b.HasOne("CreditCardPro.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("CreditCardPro.Models.CreditCard", b =>
-                {
-                    b.HasOne("CreditCardPro.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("CreditCardPro.Models.CreditCardApplication", b =>
-                {
-                    b.HasOne("CreditCardPro.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("CreditCardPro.Models.Payment", b =>
                 {
                     b.HasOne("CreditCardPro.Models.Statement", "Statement")
-                        .WithMany()
+                        .WithMany("Payments")
                         .HasForeignKey("StatementId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -454,37 +395,20 @@ namespace CreditCardPro.Migrations
                     b.Navigation("Admin");
                 });
 
-            modelBuilder.Entity("CreditCardPro.Models.Statement", b =>
-                {
-                    b.HasOne("CreditCardPro.Models.CreditCard", "CreditCard")
-                        .WithMany()
-                        .HasForeignKey("CreditCardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CreditCard");
-                });
-
-            modelBuilder.Entity("CreditCardPro.Models.SupportRequest", b =>
-                {
-                    b.HasOne("CreditCardPro.Models.Transaction", "Transaction")
-                        .WithMany()
-                        .HasForeignKey("TransactionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Transaction");
-                });
-
             modelBuilder.Entity("CreditCardPro.Models.Transaction", b =>
                 {
-                    b.HasOne("CreditCardPro.Models.CreditCard", "CreditCard")
+                    b.HasOne("CreditCardPro.Models.Payment", "Payment")
                         .WithMany()
-                        .HasForeignKey("CreditCardId")
+                        .HasForeignKey("PaymentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CreditCard");
+                    b.Navigation("Payment");
+                });
+
+            modelBuilder.Entity("CreditCardPro.Models.Statement", b =>
+                {
+                    b.Navigation("Payments");
                 });
 #pragma warning restore 612, 618
         }

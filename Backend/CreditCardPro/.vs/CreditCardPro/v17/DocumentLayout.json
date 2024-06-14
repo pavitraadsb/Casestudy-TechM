@@ -3,60 +3,100 @@
   "WorkspaceRootPath": "D:\\TechM\\CreditCardPro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\creditcardapplicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\creditcardapplicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\supportrequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\supportrequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\cardtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\cardtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\creditcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\supportrequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\supportrequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\statementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\statementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\cardtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\cardtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\migrations\\20240611163245_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\migrations\\20240611163245_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\creditcardapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\creditcardapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240614020640_initaial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CreditCardPro\\Migrations\\20240614020640_initaial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\statement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\statement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613103859_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CreditCardPro\\Migrations\\20240613103859_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613075929_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CreditCardPro\\Migrations\\20240613075929_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\supportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\supportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613064132_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CreditCardPro\\Migrations\\20240613064132_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\carddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\carddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|solutionrelative:creditcardpro\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C733C26-88B6-4F83-BCB8-ACED20685EDC}|CreditCardPro\\CreditCardPro.csproj|d:\\techm\\creditcardpro\\creditcardpro\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -74,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,189 +122,296 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReportsController.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\ReportsController.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\ReportsController.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\ReportsController.cs",
-              "RelativeToolTip": "CreditCardPro\\Controllers\\ReportsController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwCcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:37:41.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CreditCardApplicationsController.cs",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CreditCardApplicationsController.cs",
               "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\CreditCardApplicationsController.cs",
               "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CreditCardApplicationsController.cs",
               "RelativeToolTip": "CreditCardPro\\Controllers\\CreditCardApplicationsController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAkwEYAAAAAAAAA",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAkwJcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T16:35:23.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "CreditCardPro\\Controllers\\ReportsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T16:37:41.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardTypesController.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CardTypesController.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\CardTypesController.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CardTypesController.cs",
+              "RelativeToolTip": "CreditCardPro\\Controllers\\CardTypesController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAkwGAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T12:34:22.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CreditCardsController.cs",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CreditCardsController.cs",
               "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\CreditCardsController.cs",
               "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CreditCardsController.cs",
               "RelativeToolTip": "CreditCardPro\\Controllers\\CreditCardsController.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAowFAAAAAfAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:34:46.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T16:34:46.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PaymentsController.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\PaymentsController.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\PaymentsController.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\PaymentsController.cs",
-              "RelativeToolTip": "CreditCardPro\\Controllers\\PaymentsController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwCsAAABhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:36:52.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TransactionsController.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\TransactionsController.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\TransactionsController.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\TransactionsController.cs",
-              "RelativeToolTip": "CreditCardPro\\Controllers\\TransactionsController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAowC0AAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:39:07.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SupportRequestsController.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\SupportRequestsController.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\SupportRequestsController.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\SupportRequestsController.cs",
-              "RelativeToolTip": "CreditCardPro\\Controllers\\SupportRequestsController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAkwC4AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:38:34.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "AdminsController.cs",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\AdminsController.cs",
               "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\AdminsController.cs",
               "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\AdminsController.cs",
               "RelativeToolTip": "CreditCardPro\\Controllers\\AdminsController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAswHEAAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwBcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:34:12.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T16:34:12.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
+              "Title": "SupportRequestsController.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\SupportRequestsController.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\SupportRequestsController.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\SupportRequestsController.cs",
+              "RelativeToolTip": "CreditCardPro\\Controllers\\SupportRequestsController.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAmwGoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T16:38:34.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "StatementsController.cs",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\StatementsController.cs",
               "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\StatementsController.cs",
               "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\StatementsController.cs",
               "RelativeToolTip": "CreditCardPro\\Controllers\\StatementsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAwwGkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:38:09.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T16:38:09.886Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Program.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Program.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Program.cs",
-              "RelativeToolTip": "CreditCardPro\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Title": "CardType.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CardType.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\CardType.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CardType.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\CardType.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T05:59:05.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T12:32:32.671Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "CreditCardApplication.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CreditCardApplication.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\CreditCardApplication.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CreditCardApplication.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\CreditCardApplication.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA2wBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T12:46:08.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20240614020640_initaial.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240614020640_initaial.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Migrations\\20240614020640_initaial.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240614020640_initaial.cs",
+              "RelativeToolTip": "CreditCardPro\\Migrations\\20240614020640_initaial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T02:06:40.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreditCard.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CreditCard.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\CreditCard.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CreditCard.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\CreditCard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T03:57:11.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Statement.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Statement.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\Statement.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Statement.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\Statement.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T00:22:58.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\Transaction.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Transaction.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\Transaction.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAowAkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T04:02:12.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\PaymentsController.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "CreditCardPro\\Controllers\\PaymentsController.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAcwDsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T16:36:52.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\Payment.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Payment.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\Payment.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T00:21:08.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "CustomersController.cs",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CustomersController.cs",
               "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\CustomersController.cs",
               "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\CustomersController.cs",
               "RelativeToolTip": "CreditCardPro\\Controllers\\CustomersController.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAmwHoAAAANAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAwIoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:36:17.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T16:36:17.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\AccountsController.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "CreditCardPro\\Controllers\\AccountsController.cs",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Program.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Program.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Program.cs",
+              "RelativeToolTip": "CreditCardPro\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T05:59:05.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20240613103859_initial.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613103859_initial.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Migrations\\20240613103859_initial.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613103859_initial.cs",
+              "RelativeToolTip": "CreditCardPro\\Migrations\\20240613103859_initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:33:28.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T10:38:59.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20240611163245_initial.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240611163245_initial.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Migrations\\20240611163245_initial.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240611163245_initial.cs",
-              "RelativeToolTip": "CreditCardPro\\Migrations\\20240611163245_initial.cs",
+              "DocumentIndex": 17,
+              "Title": "20240613075929_initial.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613075929_initial.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Migrations\\20240613075929_initial.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613075929_initial.cs",
+              "RelativeToolTip": "CreditCardPro\\Migrations\\20240613075929_initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:32:46.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T07:59:29.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "CreditCardPro\\Models\\Customer.cs",
-              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Customer.cs",
-              "RelativeToolTip": "CreditCardPro\\Models\\Customer.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAA/wCcAAAAAAAAA",
+              "DocumentIndex": 19,
+              "Title": "SupportRequest.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\SupportRequest.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\SupportRequest.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\SupportRequest.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\SupportRequest.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T16:07:22.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T03:53:15.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
+              "Title": "20240613064132_initial.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613064132_initial.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Migrations\\20240613064132_initial.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Migrations\\20240613064132_initial.cs",
+              "RelativeToolTip": "CreditCardPro\\Migrations\\20240613064132_initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T06:41:33.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "CardDbContext.cs",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CardDbContext.cs",
               "RelativeDocumentMoniker": "CreditCardPro\\Models\\CardDbContext.cs",
               "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\CardDbContext.cs",
               "RelativeToolTip": "CreditCardPro\\Models\\CardDbContext.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAkwAQAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T05:43:47.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T05:43:47.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Controllers\\TransactionsController.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "CreditCardPro\\Controllers\\TransactionsController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T16:39:07.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "CreditCardPro\\Models\\Customer.cs",
+              "ToolTip": "D:\\TechM\\CreditCardPro\\CreditCardPro\\Models\\Customer.cs",
+              "RelativeToolTip": "CreditCardPro\\Models\\Customer.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T16:07:22.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\appsettings.json",
               "RelativeDocumentMoniker": "CreditCardPro\\appsettings.json",
@@ -272,12 +419,11 @@
               "RelativeToolTip": "CreditCardPro\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAB7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-07T05:57:48.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T05:57:48.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "CreditCardPro.csproj",
               "DocumentMoniker": "D:\\TechM\\CreditCardPro\\CreditCardPro\\CreditCardPro.csproj",
               "RelativeDocumentMoniker": "CreditCardPro\\CreditCardPro.csproj",

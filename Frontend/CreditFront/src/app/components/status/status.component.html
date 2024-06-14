@@ -1,1 +1,48 @@
-<p>status works!</p>
+<div class="container mt-5">
+  <h2>Your Credit Card Applications</h2>
+
+  <!-- Search Input -->
+  <div class="search-container">
+    <input 
+      id="search"
+      (input)="filterApplications()" 
+      class="form-control" 
+      [(ngModel)]="filterValue" 
+      placeholder="Search by Card Type" 
+    >
+  </div>
+
+  <!-- Table to Display Applications -->
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Application ID</th>
+        <th>Card Type</th>
+        <th>Employment Status</th>
+        <th>Credit Score</th>
+        <th>Application Status</th>
+        <th>Application Date</th>
+        <th>Reviewed Date</th>
+        <th>Reviewed By</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let application of filteredApplicationsList">
+        <td>{{ application.applicationId }}</td>
+        <td>{{ application.cardType }}</td>
+        
+        <td>{{ application.employmentStatus }}</td>
+        <td>{{ application.creditScore }}</td>
+        <td>{{ application.applicationStatus }}</td>
+        <td>{{ application.applicationDate | date }}</td>
+        <td>{{ application.reviewedDate ? (application.reviewedDate | date) : 'Not reviewed yet' }}</td>
+        <td>{{ application.reviewedBy ? application.reviewedBy : 'Not reviewed yet' }}</td>
+        
+      </tr>
+      <tr *ngIf="allapplications.length === 0">
+        <td colspan="10" class="text-center">No applications found for your account.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

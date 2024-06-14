@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <h2>Review Credit Card Applications</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Application ID</th>
+            <th>Card Type</th>
+            <th>Annual Income</th>
+            <th>Employment Status</th>
+            <th>Credit Score</th>
+            <th>Application Date</th>
+            <th>Reviewed By</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let application of applications">
+            <td>{{ application.applicationId }}</td>
+            <td>{{ application.cardType }}</td>
+            <td>{{ application.annualIncome }}</td>
+            <td>{{ application.employmentStatus }}</td>
+            <td>{{ application.creditScore }}</td>
+            <td>{{ application.applicationDate | date }}</td>
+            <td>{{ application.reviewedBy }}</td>
+            <td>{{ application.applicationStatus }}</td>
+            <td>
+              <button class="btn btn-success" (click)="changeStatus(application, 'Approved')" [disabled]="application.applicationStatus !== 'Pending'">Approve</button>
+              <button class="btn btn-danger" (click)="changeStatus(application, 'Rejected')" [disabled]="application.applicationStatus !== 'Pending'">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

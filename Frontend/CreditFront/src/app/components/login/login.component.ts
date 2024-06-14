@@ -1,48 +1,53 @@
 import { Component, OnInit } from '@angular/core';
-import { CustLoginRequest, LoginRequest } from './login.model';
+import { CustLoginRequest } from './login.model';
 import { CustomerService } from 'src/app/service/customer.service';
 import { Router } from '@angular/router';
-import { AdminService } from 'src/app/service/admin.service';
-import { Customer } from '../register/register.model';
-import { Admin } from '../register/admin.model';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginRequest: CustLoginRequest = new CustLoginRequest();
-  adminRequest:LoginRequest=new LoginRequest();
+  loginRequest: any = {};
+  loginError: string = '';
 
-  constructor(private router: Router, private customerService: CustomerService, private adminService: AdminService) {}
-  navigateToRegister(){
+  constructor(
+    private router: Router,
+    private customerService: CustomerService,
+  ) {}
+
+  ngOnInit(): void {}
+
+  navigateToRegister(): void {
     this.router.navigate(['register']);
   }
-  onSubmit() {
-    // Authenticate customer
+
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+
     this.customerService.login(this.loginRequest).subscribe(
-      (customer:Customer) => {
-        // Navigate to user dashboard
-        this.router.navigate(['/userdashboard']);
+      (customer) => {
+        console.log('Logged in customer:', customer);
+        if (customer && customer.customerId !== undefined) {
+          this.customerService.setCustomerId(customer.customerId);
+          this.router.navigate(['/userdashboard']);
+        } else {
+          this.loginError = 'Login response does not contain a valid customerId.';
+          console.error('Invalid login response:', customer);
+        }
       },
       (error) => {
-        // If customer authentication fails, authenticate admin
-        this.adminService.login(this.adminRequest).subscribe(
-          (admin:Admin) => {
-            // Navigate to admin dashboard
-            this.router.navigate(['/admindashboard']);
-          },
-          (error) => {
-            // If both customer and admin authentication fails
-            alert('Invalid credentials');
-          }
-        );
+        console.error('Login error:', error);
+        if (error.status === 401) {
+          this.loginError = 'Invalid username or password. Please try again.';
+        } else {
+          this.loginError = `An error occurred: ${error.message}`;
+        }
       }
     );
   }
   
-
-  ngOnInit(): void {
-  }
-
 }

@@ -7,9 +7,9 @@ namespace CreditCardPro.Models
     {
         [Key]
         public int TransactionId { get; set; }
-        public int CreditCardId { get; set; }
-        [ForeignKey("CreditCardId")]
-        public CreditCard CreditCard { get; set; }
+        public int PaymentId {  get; set; }
+        [ForeignKey("PaymentId")]
+        public Payment Payment { get; set; }
         public DateTime TransactionDate { get; set; } = DateTime.Now;
         public decimal Amount { get; set; }
         public string Merchant { get; set; }

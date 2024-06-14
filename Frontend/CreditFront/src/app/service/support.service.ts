@@ -15,11 +15,18 @@ export class SupportService {
     return this.http.post<SupportRequest>(`${this.apiUrl}`, request);
   }
 
-  getRequest(id: number): Observable<SupportRequest> {
-    return this.http.get<SupportRequest>(`${this.apiUrl}/${id}`);
+  // getRequest(id: number): Observable<SupportRequest> {
+  //   return this.http.get<SupportRequest>(`${this.apiUrl}/${id}`);
+  // }
+
+  // updateRequestStatus(id: number, request: SupportRequest): Observable<void> {
+  //   return this.http.put<void>(`${this.apiUrl}/${id}`, request);
+  // }
+  getSupportRequests(): Observable<SupportRequest[]> {
+    return this.http.get<SupportRequest[]>(`${this.apiUrl}/requests`);
   }
 
-  updateRequestStatus(id: number, request: SupportRequest): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/${id}`, request);
+  submitSupportRequest(supportRequest: SupportRequest): Observable<any> {
+    return this.http.post(`${this.apiUrl}/submit`, supportRequest);
   }
 }

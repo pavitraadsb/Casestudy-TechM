@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccountComponent } from './account.component';
+import { AdmincardtypeComponent } from './admincardtype.component';
 
-describe('AccountComponent', () => {
-  let component: AccountComponent;
-  let fixture: ComponentFixture<AccountComponent>;
+describe('AdmincardtypeComponent', () => {
+  let component: AdmincardtypeComponent;
+  let fixture: ComponentFixture<AdmincardtypeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountComponent ]
+      declarations: [ AdmincardtypeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AccountComponent);
+    fixture = TestBed.createComponent(AdmincardtypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

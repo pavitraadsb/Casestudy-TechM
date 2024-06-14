@@ -103,5 +103,14 @@ namespace CreditCardPro.Controllers
         {
             return _context.Statements.Any(e => e.StatementId == id);
         }
+
+        [HttpGet("statements")]
+        public async Task<IActionResult> GetStatement()
+        {
+            var statements = await _context.Statements.ToListAsync();
+            return Ok(statements);
+        }
+
+        
     }
 }

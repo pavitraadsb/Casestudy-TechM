@@ -22,9 +22,24 @@ namespace CreditCardPro.Controllers
 
         // GET: api/Transactions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactions()
+        public async Task<IActionResult> GetTransactions([FromQuery] TransactionFilter filter)
         {
-            return await _context.Transactions.ToListAsync();
+            var query = _context.Transactions.AsQueryable();
+
+            if (filter.StartDate.HasValue)
+                query = query.Where(t => t.TransactionDate >= filter.StartDate.Value);
+
+            if (filter.EndDate.HasValue)
+                query = query.Where(t => t.TransactionDate <= filter.EndDate.Value);
+
+            if (filter.Amount.HasValue)
+                query = query.Where(t => t.Amount == filter.Amount.Value);
+
+            if (!string.IsNullOrEmpty(filter.Category))
+                query = query.Where(t => t.Category == filter.Category);
+
+            var transactions = await query.ToListAsync();
+            return Ok(transactions);
         }
 
         // GET: api/Transactions/5
@@ -40,12 +55,7 @@ namespace CreditCardPro.Controllers
 
             return transaction;
         }
-        [HttpGet("CreditCard/{CreditCardId}")]
-        public async Task<ActionResult<IEnumerable<Transaction>>> GetCustomerTransaction(int CreditCardId)
-        {
-            var transactions = await _context.Transactions.Where(t => t.CreditCardId == CreditCardId).ToListAsync();
-            return Ok(transactions);
-        }
+       
 
         // PUT: api/Transactions/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -109,5 +119,12 @@ namespace CreditCardPro.Controllers
         {
             return _context.Transactions.Any(e => e.TransactionId == id);
         }
+    }
+    public class TransactionFilter
+    {
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public decimal? Amount { get; set; }
+        public string Category { get; set; }
     }
 }

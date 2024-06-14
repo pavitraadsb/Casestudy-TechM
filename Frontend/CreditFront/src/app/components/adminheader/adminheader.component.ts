@@ -13,7 +13,7 @@ export class AdminheaderComponent implements OnInit {
   ngOnInit(): void {
   }
   logout(){
-    this.router.navigate(['/login'])
+    this.router.navigate(['/adminlogin'])
   }
 
 }

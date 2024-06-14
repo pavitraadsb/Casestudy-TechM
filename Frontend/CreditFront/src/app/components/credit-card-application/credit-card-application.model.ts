@@ -1,14 +1,14 @@
 export interface CreditCardApplication {
-    ApplicationId?: number ;
-    CustomerId: number ;
-    CardType: string ;
-    AnnualIncome: number ;
-    EmploymentStatus: string ;
-    CreditScore: number ;
-    ApplicationStatus: string;
-    ApplicationDate?: Date ;
-    ReviewedDate?: Date;
-    ReviewedBy?: number;
-    AccountNumber?:string;
-  }
-  
+  applicationId:number ;
+  customerId:number;
+  cardType: string ;
+  annualIncome: number ;
+  employmentStatus: string ;
+  creditScore: number ;
+  applicationStatus:string;
+  applicationDate?:Date;
+  reviewedDate?:Date;
+  reviewedBy?:number;
+  accountNumber:string
+}
+

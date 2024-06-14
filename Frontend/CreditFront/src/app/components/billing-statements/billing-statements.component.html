@@ -1,19 +1,70 @@
-<div class="payment-container">
-  <h2>Payments</h2>
-  <table>
+<!-- <div class="container">
+  <h2>Customer Payments</h2>
+  <table class="table table-striped">
     <thead>
       <tr>
-        <th>Payment Date</th>
+        <th>Payment ID</th>
         <th>Amount</th>
         <th>Payment Method</th>
+        <th>Payment Date</th>
+        <th>Total Due</th>
+        <th>Outstanding Balance</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let payment of payments">
-        <td>{{ payment.PaymentDate | date }}</td>
-        <td>{{ payment.Amount }}</td>
-        <td>{{ payment.PaymentMethod }}</td>
+        <td>{{ payment.paymentId }}</td>
+        <td>{{ payment.amount }}</td>
+        <td>{{ payment.paymentMethod }}</td>
+        <td>{{ payment.paymentDate | date }}</td>
+        <td>{{ payment.totalDue }}</td>
+        <td>{{ payment.outstandingBalance }}</td>
       </tr>
     </tbody>
   </table>
+
+  <div class="payment-form">
+    <h3>Make a Payment</h3>
+    <form (ngSubmit)="makePayment()">
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" class="form-control" id="amount" [(ngModel)]="newPayment.amount" name="amount" required>
+      </div>
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method</label>
+        <input type="text" class="form-control" id="paymentMethod" [(ngModel)]="newPayment.paymentMethod" name="paymentMethod" required>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="navigateTo()">Submit Payment</button>
+    </form>
+  </div>
+</div> -->
+<div>
+  <h2>Statements</h2>
+  <table >
+    <thead>
+      <tr>
+        <th>Statement ID</th>
+        <th>Total Due</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let statement of statements">
+        <td>{{ statement.statementId }}</td>
+        <td>{{ statement.totalDue }}</td>
+        <td><button (click)="selectedStatement = statement">Select</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="selectedStatement">
+    <h3>Make Payment</h3>
+    <p>Statement ID: {{ selectedStatement.statementId }}</p>
+    <p>Total Due: {{ selectedStatement.totalDue }}</p>
+    <label for="amount">Amount:</label>
+    <input type="number" [(ngModel)]="amount">
+    <label for="paymentMethod">Payment Method:</label>
+    <input type="text" [(ngModel)]="paymentMethod">
+    <button (click)="makePayment()">Make Payment</button>
+  </div>
 </div>

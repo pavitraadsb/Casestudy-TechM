@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    text-align: left;
+    color: #9f0ebca9;
+  }
+  
+  /* Styles for the table headers and cells */
+  th, td {
+    padding: 12px 15px;
+  }
+  
+  th {
+    background-color: #7a23ac94;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+  }
+  
+  tr {
+    border-bottom: 1px solid #0f0d0d;
+  }
+  
+  /* Styles for even rows */
+  tr:nth-of-type(even) {
+    background-color: #000000;
+  }
+  
+  /* Styles for the last row */
+  tr:last-of-type {
+    border-bottom: 2px solid #000000;
+  }
+  
+  /* Hover effect for table rows */
+  tr:hover {
+    background-color: #5e315b97;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-card {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  /* Styles for the search input field */
+  #search {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

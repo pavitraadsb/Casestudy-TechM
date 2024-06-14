@@ -1,30 +1,52 @@
-<div class="credit-card-apply-container">
-  <h2>Apply for a Credit Card</h2>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="CustomerId">Customer ID</label>
-      <input type="number" id="CustomerId" class="form-control" [(ngModel)]="application.CustomerId" name="CustomerId" required>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2>Credit Card Application</h2>
+      <form #applicationForm="ngForm" (ngSubmit)="onSubmit(applicationForm)">
+        
+        <div class="form-group">
+          <label for="cardType">Card Type</label>
+          <select class="form-control" id="cardType" [(ngModel)]="application.cardType" name="cardType" required>
+            <option value="" disabled>Select Card Type</option> 
+             <option *ngFor="let type of cardTypes" [value]="type.typeName">{{ type.typeName}}</option> 
+          </select>
+          <div *ngIf="applicationForm.controls['cardType']?.invalid && (applicationForm.controls['cardType']?.dirty || applicationForm.controls['cardType']?.touched)" class="text-danger">
+            Card Type is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="annualIncome">Annual Income</label>
+          <input type="number" class="form-control" id="annualIncome" [(ngModel)]="application.annualIncome" name="annualIncome" required>
+          <div *ngIf="applicationForm.controls['annualIncome']?.invalid && (applicationForm.controls['annualIncome']?.dirty || applicationForm.controls['annualIncome']?.touched)" class="text-danger">
+            Annual Income is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="employmentStatus">Employment Status</label>
+          <input type="text" class="form-control" id="employmentStatus" [(ngModel)]="application.employmentStatus" name="employmentStatus" required>
+          <div *ngIf="applicationForm.controls['employmentStatus']?.invalid && (applicationForm.controls['employmentStatus']?.dirty || applicationForm.controls['employmentStatus']?.touched)" class="text-danger">
+            Employment Status is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="creditScore">Credit Score</label>
+          <input type="number" class="form-control" id="creditScore" [(ngModel)]="application.creditScore" name="creditScore" required>
+          <div *ngIf="applicationForm.controls['creditScore']?.invalid && (applicationForm.controls['creditScore']?.dirty || applicationForm.controls['creditScore']?.touched)" class="text-danger">
+            Credit Score is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="accountNumber">Account Number</label>
+          <input type="text" class="form-control" id="accountNumber" [(ngModel)]="application.accountNumber" name="accountNumber">
+          <!-- No validation for account number as it's optional -->
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3" [disabled]="!applicationForm.valid">Submit Application</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="cardType">Card Type</label>
-      <select id="cardType" class="form-control" [(ngModel)]="application.CardType" name="CardType" required>
-        <option value="Standard">Standard</option>
-        <option value="Gold">Gold</option>
-        <option value="Platinum">Platinum</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="annualIncome">Annual Income</label>
-      <input type="number" id="annualIncome" class="form-control" [(ngModel)]="application.AnnualIncome" name="AnnualIncome" required>
-    </div>
-    <div class="form-group">
-      <label for="employmentStatus">Employment Status</label>
-      <input type="text" id="employmentStatus" class="form-control" [(ngModel)]="application.EmploymentStatus" name="EmploymentStatus" required>
-    </div>
-    <div class="form-group">
-      <label for="creditScore">Credit Score</label>
-      <input type="number" id="creditScore" class="form-control" [(ngModel)]="application.CreditScore" name="CreditScore" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit Application</button>
-  </form>
+  </div>
 </div>

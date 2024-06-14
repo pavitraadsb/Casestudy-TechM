@@ -7,9 +7,8 @@ namespace CreditCardPro.Models
     {
         [Key]
         public int ApplicationId { get; set; }
+        [Required]
         public int CustomerId { get; set; }
-        [ForeignKey("CustomerId")]
-        public Customer Customer { get; set; }
         [Required]
         public string CardType { get; set; }
         public decimal AnnualIncome { get; set; }

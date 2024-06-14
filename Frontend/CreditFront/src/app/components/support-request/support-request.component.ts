@@ -9,20 +9,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./support-request.component.css']
 })
 export class SupportRequestComponent implements OnInit {
-  request: SupportRequest = new SupportRequest();
+  supportRequest: SupportRequest = new SupportRequest();
+  supportRequests: SupportRequest[] = [];
 
-  constructor(private router: Router, private requestService: SupportService) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  constructor(private supportService: SupportService) {}
+
+  ngOnInit() {
+    this.loadSupportRequests();
+  }
+
+  loadSupportRequests() {
+    this.supportService.getSupportRequests().subscribe(
+      data => {
+        this.supportRequests = data;
+      },
+      error => {
+        alert('Error loading support requests');
+      }
+    );
   }
 
   onSubmit() {
-    this.requestService.create(this.request).subscribe(
-      (response) => {
-        this.router.navigate(['/support-request-status', response.supportRequestId]);
+    this.supportService.submitSupportRequest(this.supportRequest).subscribe(
+      response => {
+        alert('Support request submitted successfully');
+        this.loadSupportRequests();
       },
-      (error) => {
-        alert('Support request failed');
+      error => {
+        alert('Error submitting support request');
       }
     );
   }

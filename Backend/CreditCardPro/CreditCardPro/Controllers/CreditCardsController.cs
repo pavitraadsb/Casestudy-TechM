@@ -40,16 +40,7 @@ namespace CreditCardPro.Controllers
             return creditCard;
         }
 
-        [HttpGet("customer/{customerId}")]
-        public ActionResult<IEnumerable<CreditCard>> GetCreditCardsByCustomerId(int customerId)
-        {
-            var creditCards = _context.creditCards.Where(c => c.CustomerId == customerId).ToList();
-            if (creditCards == null || creditCards.Count == 0)
-            {
-                return NotFound("No credit cards found for this customer.");
-            }
-            return Ok(creditCards);
-        }
+        
         // PUT: api/CreditCards/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

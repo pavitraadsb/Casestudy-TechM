@@ -21,10 +21,16 @@ namespace CreditCardPro.Controllers
         }
 
         // GET: api/Payments
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<Payment>>> GetPayments()
+        //{
+        //    return await _context.Payments.ToListAsync();
+        //}
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Payment>>> GetPayments()
+        public ActionResult<IEnumerable<Payment>> GetPayments()
         {
-            return await _context.Payments.ToListAsync();
+            var payments = _context.Payments.ToList();
+            return Ok(payments);
         }
 
         // GET: api/Payments/5
@@ -40,12 +46,25 @@ namespace CreditCardPro.Controllers
 
             return payment;
         }
-        [HttpGet("Statement/{StatementId}")]
-        public async Task<ActionResult<IEnumerable<Payment>>> GetCustomerPayments(int StatementId)
+        [HttpGet("{CustomerId}")]
+        public IActionResult GetPayments(int CustomerId)
         {
-            var payments = await _context.Payments.Where(p => p.StatementId == StatementId).ToListAsync();
+            var payments = _context.Payments
+                .Include(p => p.Statement)  // Include the Statement
+                .Where(p => p.Statement.CustomerId == CustomerId)
+                .Select(p => new
+                {
+                    p.PaymentId,
+                    p.Amount,
+                    p.PaymentMethod,
+                    p.PaymentDate,
+                    TotalDue = p.Statement.TotalDue,
+                    OutstandingBalance = p.Statement.TotalDue - p.Statement.AmountPaid
+                }).ToList();
+
             return Ok(payments);
         }
+       
         // PUT: api/Payments/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -80,12 +99,18 @@ namespace CreditCardPro.Controllers
         // POST: api/Payments
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Payment>> MakePayment(Payment payment)
+        public IActionResult MakePayment([FromBody] Payment payment)
         {
-            _context.Payments.Add(payment);
-            await _context.SaveChangesAsync();
+            var statement = _context.Statements.Find(payment.StatementId);
 
-            return CreatedAtAction("GetPayment", new { id = payment.PaymentId }, payment);
+            if (statement == null)
+                return NotFound("Statement not found");
+
+            statement.AmountPaid += payment.Amount;
+            _context.Payments.Add(payment);
+            _context.SaveChanges();
+
+            return Ok(payment);
         }
 
         // DELETE: api/Payments/5
@@ -109,4 +134,5 @@ namespace CreditCardPro.Controllers
             return _context.Payments.Any(e => e.PaymentId == id);
         }
     }
+
 }

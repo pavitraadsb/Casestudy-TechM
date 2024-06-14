@@ -1,8 +1,50 @@
-<div class="transaction-container">
-  <h2>Transactions</h2>
-  <table>
+<!-- <div class="container">
+  <h2>Transaction History</h2>
+  <form (ngSubmit)="onFilter()">
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" class="form-control" id="StartDate" [(ngModel)]="filters.StartDate" name="StartDate">
+    </div>
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" class="form-control" id="EndDate" [(ngModel)]="filters.EndDate" name="EndDate">
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="number" class="form-control" id="Amount" [(ngModel)]="filters.Amount" name="Amount">
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+  </form>
+  <table class="table table-striped mt-4">
     <thead>
       <tr>
+        <th>Transaction ID</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Merchant</th>
+        <th>Category</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{transaction.transactionId}}</td>
+        <td>{{transaction.transactionDate}}</td>
+        <td>{{transaction.amount}}</td>
+        <td>{{transaction.merchant}}</td>
+        <td>{{transaction.category}}</td>
+        <td>{{transaction.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+<div>
+  <h2>Transaction History</h2>
+  <table >
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Payment ID</th>
         <th>Transaction Date</th>
         <th>Amount</th>
         <th>Merchant</th>
@@ -12,11 +54,13 @@
     </thead>
     <tbody>
       <tr *ngFor="let transaction of transactions">
-        <td>{{ transaction.TransactionDate | date }}</td>
-        <td>{{ transaction.Amount }}</td>
-        <td>{{ transaction.Merchant }}</td>
-        <td>{{ transaction.Category }}</td>
-        <td>{{ transaction.Status }}</td>
+        <td>{{ transaction.transactionId }}</td>
+        <td>{{ transaction.paymentId }}</td>
+        <td>{{ transaction.transactionDate | date: 'short' }}</td>
+        <td>{{ transaction.amount }}</td>
+        <td>{{ transaction.merchant }}</td>
+        <td>{{ transaction.category }}</td>
+        <td>{{ transaction.status }}</td>
       </tr>
     </tbody>
   </table>

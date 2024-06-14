@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Customer } from '../components/register/register.model';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CustLoginRequest } from '../components/login/login.model';
 
@@ -8,20 +8,41 @@ import { CustLoginRequest } from '../components/login/login.model';
   providedIn: 'root'
 })
 export class CustomerService {
+  private CustomerIdKey = 'CustomerId';
   private apiUrl = 'https://localhost:7169/api/Customers';
 
   constructor(private http: HttpClient) {}
 
   register(customer: Customer): Observable<any> {
-    return this.http.post<any>(this.apiUrl, customer);
+    return this.http.post<any>(`${this.apiUrl}/register`, customer);
   }
-  login(request: CustLoginRequest): Observable<Customer> {
-    return this.http.post<Customer>(`${this.apiUrl}/login`, request);
+
+  setCustomerId(customerId: number | undefined): void {
+    if (customerId !== undefined) {
+      localStorage.setItem(this.CustomerIdKey, customerId.toString());
+    } else {
+      console.error('CustomerId is undefined.');
+    }
   }
-  updateCustomer(id: number, customer: Customer): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/${id}`, customer);
+
+  getCustomerId(): number | null {
+    const customerIdStr = localStorage.getItem(this.CustomerIdKey);
+    return customerIdStr ? +customerIdStr : null;
   }
-  getCustomer(id: number): Observable<Customer> {
-    return this.http.get<Customer>(`${this.apiUrl}/${id}`);
+
+  clearCustomerId(): void {
+    localStorage.removeItem(this.CustomerIdKey);
+  }
+
+  login(loginRequest: CustLoginRequest): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/login`, loginRequest).pipe(
+      tap((response) => {
+        if (response && response.customerId !== undefined) {
+          this.setCustomerId(response.customerId);
+        } else {
+          console.error('Response does not contain customerId:', response);
+        }
+      })
+    );
   }
 }
